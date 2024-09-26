@@ -72,12 +72,8 @@
     }
   }
   &__form-btn {
+    @extend %btn;
     border: none;
-    background-color: $accent;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 12px 26px;
-    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
     cursor: pointer;
   }
 }
@@ -89,10 +85,10 @@
   &__copy {
     font-size: 12px;
   }
-  &__accept{
+  &__accept {
     font-size: 12px;
   }
-  &__accept-img{
+  &__accept-img {
     display: inline-block;
     margin-left: 25px;
     vertical-align: middle;
