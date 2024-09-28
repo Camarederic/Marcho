@@ -1,5 +1,6 @@
 html,
-body {                   /* Это для прижатия footer к низу */
+body {
+  /* Это для прижатия footer к низу */
   height: 100%;
 }
 body {
@@ -11,8 +12,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-.main{
-  flex-grow: 1;      /* Это для прижатия footer к низу */
+.main {
+  flex-grow: 1; /* Это для прижатия footer к низу */
 }
 .container {
   max-width: 1200px;
@@ -25,4 +26,19 @@ a {
   font-size: 16px;
   line-height: 26px;
   @extend %quicksand-500;
+}
+
+.title {
+  text-align: center;
+  @extend %roboto-700;
+  font-size: 48px;
+  line-height: 65px;
+  color: $title;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.text {
+  text-align: center;
+  max-width: 570px;
+  margin: 0 auto 55px;
 }
