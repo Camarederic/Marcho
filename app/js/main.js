@@ -7,6 +7,22 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2000,
   });
+
+  $(".product-slide__thumb").slick({
+    asNavFor: ".product-slide__big",
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  });
+  $(".product-slide__big").slick({
+    asNavFor: ".product-slide__thumb",
+    draggable: false,
+    arrows: false,
+    fade: true,
+  });
+
   /* Для звездного рейтинга */
   $(".star").rateYo({
     starWidth: "17px",
@@ -29,8 +45,21 @@ $(function () {
     },
   });
 
+  /* Это клик на табы */
+  $(".product-tabs__top-item").on("click", function (e) {
+    e.preventDefault();
+    $(".product-tabs__top-item").removeClass("product-tabs__top-item--active");
+    $(this).addClass("product-tabs__top-item--active");
+
+    $(".product-tabs__content-item").removeClass(
+      "product-tabs__content-item--active"
+    );
+    $($(this).attr("href")).addClass("product-tabs__content-item--active");
+  });
+
   /* Это код для стилизации селекта */
   $(".select-style").styler();
+  $(".product-one__num").styler();
 
   /* Это для клика кнопки */
   $(".shop-content__filter-btn").on("click", function () {
