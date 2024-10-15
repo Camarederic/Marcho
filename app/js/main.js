@@ -87,6 +87,16 @@ $(function () {
     $(".product-item").removeClass("product-item--list");
   });
 
+  /* Это код для клика на гамбургер, чтобы появлялось и исчезало меню */
+  $(".menu__btn").on("click", function () {
+    $(".menu__list").toggleClass("menu__list--active");
+  });
+  /* Это код для клика на заглавие, чтобы появлялся и исчезал список */
+  /* $(".footer-top__title").on("click", function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass("active");
+  }); */
+
   /* Этот код для таймера */
   function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
@@ -130,8 +140,4 @@ $(function () {
 
   const deadline = $(".promo__clock").attr("data-time");
   initializeClock("promo__clock", deadline);
-
-
-
-  
 });
