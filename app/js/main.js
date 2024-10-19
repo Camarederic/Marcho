@@ -21,6 +21,14 @@ $(function () {
     draggable: false,
     arrows: false,
     fade: true,
+    responsive: [
+      {
+        breakpoint: 1051,
+        settings: {
+          draggable: true,
+        },
+      },
+    ],
   });
 
   $(".blog-page__slider").slick({
@@ -81,10 +89,17 @@ $(function () {
 
   $(".button-list").on("click", function () {
     $(".product-item").addClass("product-item--list");
+    $(".shop-content__inner").addClass("shop-content__nogrid");
   });
 
   $(".button-grid").on("click", function () {
     $(".product-item").removeClass("product-item--list");
+    $(".shop-content__inner").removeClass("shop-content__nogrid");
+  });
+
+  /* Это для клика на кнопку фильтр */
+  $(".shop__filter-btn").on("click", function () {
+    $(".shop__filters").slideToggle();
   });
 
   /* Это код для клика на гамбургер, чтобы появлялось и исчезало меню */
